@@ -7,7 +7,7 @@ function Toast({ message, type, onClose }) {
     <div className={`toast toast-${type}`}>
       <span>{message}</span>
       <button className="toast-close" onClick={onClose}>
-        ✕
+        X
       </button>
     </div>
   );
@@ -16,7 +16,8 @@ function Toast({ message, type, onClose }) {
 export default function RSVP() {
   const [nama, setNama] = useState("");
   const [hadir, setHadir] = useState(null);
-  const [jumlah, setJumlah] = useState("");
+  const [jumlah, setJumlah] = useState(1);
+  const [pesan, setPesan] = useState("");
   const [loading, setLoading] = useState(false);
   const [toast, setToast] = useState(null);
 
@@ -40,17 +41,20 @@ export default function RSVP() {
     }
     setLoading(true);
     try {
-      await submitRSVP({ nama, hadir, jumlah: hadir ? jumlah : 0 });
+      await submitRSVP({ nama, hadir, jumlah: hadir ? jumlah : 0, pesan });
       showToast("Terima kasih! Kami tunggu kehadiranmu 🌸", "success");
       setNama("");
       setHadir(null);
-      setJumlah("");
+      setJumlah(1);
+      setPesan("");
     } catch (err) {
       showToast("Gagal mengirim, coba lagi ya!", "error");
     } finally {
       setLoading(false);
     }
   };
+
+  const isDisabled = hadir === false || hadir === null;
 
   return (
     <div className="rsvp-container">
@@ -108,25 +112,42 @@ export default function RSVP() {
               </button>
               <button
                 className={`rsvp-option ${hadir === false ? "rsvp-option-active" : ""}`}
-                onClick={() => setHadir(false)}
+                onClick={() => {
+                  setHadir(false);
+                  setJumlah(0);
+                }}
               >
                 Maaf banget gak bisa :(
               </button>
             </div>
           </div>
 
-          {hadir === true && (
-            <div className="rsvp-field">
-              <label className="rsvp-label">Jumlah yang hadir</label>
-              <input
-                type="number"
-                className="rsvp-input"
-                min="1"
-                value={jumlah}
-                onChange={(e) => setJumlah(e.target.value)}
-              />
-            </div>
-          )}
+          <div
+            className={`rsvp-field ${isDisabled ? "rsvp-field-disabled" : ""}`}
+          >
+            <label className="rsvp-label">Jumlah yang hadir</label>
+            <input
+              type="number"
+              className={`rsvp-input ${isDisabled ? "rsvp-input-disabled" : ""}`}
+              min="1"
+              value={isDisabled ? "" : jumlah}
+              disabled={isDisabled}
+              onChange={(e) => setJumlah(e.target.value)}
+            />
+          </div>
+
+          <div
+            className={`rsvp-field ${isDisabled ? "rsvp-field-disabled" : ""}`}
+          >
+            <label className="rsvp-label">Ucapan & doa</label>
+            <textarea
+              className={`rsvp-input rsvp-textarea ${isDisabled ? "rsvp-input-disabled" : ""}`}
+              value={isDisabled ? "" : pesan}
+              disabled={isDisabled}
+              placeholder={isDisabled ? "" : "Tulis pesanmu disini..."}
+              onChange={(e) => setPesan(e.target.value)}
+            />
+          </div>
 
           <button
             className="rsvp-submit"
@@ -135,11 +156,6 @@ export default function RSVP() {
           >
             {loading ? "Mengirim..." : "RSVP now"}
           </button>
-
-          <p className="rsvp-disclaimer">
-            Nama profil kamu tidak akan ditampilkan, jangan khawatir privasi
-            kamu aman bersama kami.
-          </p>
         </div>
       </div>
     </div>

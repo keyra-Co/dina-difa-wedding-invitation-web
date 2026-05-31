@@ -38,7 +38,7 @@
 .rsvp-content {
     display: flex;
     flex-direction: column;
-    gap: 0.6rem;
+    gap: 0.2rem;
 
     background-color: rgba(255, 255, 255, 1);
 
@@ -59,7 +59,6 @@
     font-size: 1.2rem;
     font-weight: bold;
     color: #000000;
-    margin-bottom: 0.2rem;
 }
 
 .rsvp-field {
@@ -73,6 +72,7 @@
     font-size: 0.55rem;
     color: #000000;
     font-weight: 600;
+    text-transform: capitalize;
 }
 
 .rsvp-input {
@@ -84,6 +84,23 @@
     outline: none;
     width: 100%;
     background: white;
+}
+
+.rsvp-textarea {
+    resize: none;
+    height: 2rem;
+    font-family: var(--font-alice);
+}
+
+/* DISABLED STATE */
+.rsvp-field-disabled {
+    opacity: 0.45;
+}
+
+.rsvp-input-disabled {
+    background-color: #f0f0f0;
+    cursor: not-allowed;
+    color: #999;
 }
 
 .rsvp-input:focus {
@@ -142,16 +159,6 @@
     cursor: not-allowed;
 }
 
-.rsvp-disclaimer {
-    font-family: var(--font-alice);
-    font-size: 0.4rem;
-    color: var(--color-text-muted);
-    text-align: center;
-    line-height: 1.4;
-    margin-top: auto;
-}
-
-/* TOAST */
 .toast {
     position: fixed;
     bottom: 1.5rem;
@@ -214,13 +221,12 @@
     }
 
     .rsvp-content {
-        gap: 0.7rem;
+        gap: 0.3rem;
         width: 16rem;
     }
 
     .rsvp-title {
         font-size: 1.4rem;
-        margin-bottom: 0.2rem;
     }
 
     .rsvp-field {
@@ -235,6 +241,10 @@
         font-size: 0.65rem;
     }
 
+    .rsvp-textarea {
+        height: 3rem;
+    }
+
     .rsvp-options {
         gap: 0.2rem;
     }
@@ -245,11 +255,6 @@
 
     .rsvp-submit {
         font-size: 0.7rem;
-    }
-
-    .rsvp-disclaimer {
-        font-size: 0.4rem;
-        line-height: 1.1;
     }
 
     .toast {
@@ -281,13 +286,12 @@
     }
 
     .rsvp-content {
-        gap: 0.7rem;
+        gap: 0.4rem;
         width: 20rem;
     }
 
     .rsvp-title {
         font-size: 2rem;
-        margin-bottom: 0.4rem;
     }
 
     .rsvp-field {
@@ -302,6 +306,10 @@
         font-size: 0.8rem;
     }
 
+    .rsvp-textarea {
+        height: 3rem;
+    }
+
     .rsvp-options {
         gap: 0.4rem;
     }
@@ -312,10 +320,6 @@
 
     .rsvp-submit {
         font-size: 1rem;
-    }
-
-    .rsvp-disclaimer {
-        font-size: 0.5rem;
     }
 
     .toast {
