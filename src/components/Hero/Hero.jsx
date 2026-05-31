@@ -151,7 +151,7 @@ export default function Hero() {
             />
             <div className="frame-rect-content">
               <SlideUp delay={0}>
-                <p className="text-the-wedding-of">the wedding of</p>
+                <p className="text-the-wedding-of">The Wedding of</p>
               </SlideUp>
               <SlideX direction="left" delay={0.2}>
                 <p className="text-name">Dina Ameliani</p>

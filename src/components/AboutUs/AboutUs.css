@@ -126,8 +126,8 @@
     }
 
     .about-text {
-        font-size: 0.8rem;
-        line-height: 1.6;
+        font-size: 0.9rem;
+        line-height: 1.2;
         margin-bottom: 0.6rem;
     }
 }
@@ -170,7 +170,7 @@
 
     .about-text {
         font-size: 1.05rem;
-        line-height: 1.5;
+        line-height: 1.4;
         margin-bottom: 1rem;
     }
 }

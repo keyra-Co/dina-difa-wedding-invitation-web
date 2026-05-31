@@ -80,7 +80,7 @@ export default function AboutUs() {
           <SlotTitle delay={0} />
           <SlideUp delay={0.2}>
             <p className="about-text">
-              Tidak ada kisah yang selalu dramatis. Tidak ada pertemuan ala film
+              Tidak ada kisah yang terlalu dramatis. Tidak ada pertemuan ala film
               romantis. Hanya dua manusia biasa yang dipertemukan pada waktu
               yang tepat.
             </p>
