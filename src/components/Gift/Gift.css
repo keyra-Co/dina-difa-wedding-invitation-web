@@ -1,0 +1,234 @@
+.gift-container {
+    padding: 0 0.75rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: relative;
+    margin-top: -2.5rem;
+}
+
+.gift-frame-group {
+    position: relative;
+    width: 15.5rem;
+    right: -1rem;
+}
+
+.gift-frame {
+    display: block;
+}
+
+.gift-content {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 2rem;
+    gap: 0.4rem;
+    text-align: center;
+}
+
+.gift-title-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.gift-title {
+    font-family: var(--font-moontime);
+    font-size: 1.4rem;
+    color: white;
+}
+
+.gift-icon {
+    width: 2rem;
+}
+
+/* DISCLAIMER */
+.gift-disclaimer {
+    font-family: var(--font-alice);
+    font-size: 0.5rem;
+    color: white;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.gift-slot-wrapper {
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: bottom;
+    margin-right: 0.2em;
+}
+
+.gift-slot-line {
+    display: inline-block;
+}
+
+.gift-rekening {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.1rem;
+}
+
+.gift-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .3rem;
+}
+
+.gift-bank {
+    font-family: var(--font-alice);
+    font-size: 0.65rem;
+    font-weight: bold;
+    color: white;
+}
+
+.gift-atas-nama {
+    font-family: var(--font-alice);
+    font-size: 0.45rem;
+    color: white;
+}
+
+/* COPY BUTTON */
+.gift-copy-btn {
+    font-family: var(--font-alice);
+    font-size: 0.4rem;
+    color: var(--color-green-primary);
+    background: white;
+    border: none;
+    border-radius: 999px;
+    padding: 0.15rem 0.5rem;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.gift-copy-btn:hover {
+    background: #f0f5e8;
+}
+
+.gift-dove {
+    width: 12rem;
+    margin-top: -3.5rem;
+    margin-right: 1rem;
+    animation: butterfly-fly 2s ease-in-out infinite;
+}
+
+
+@media (min-width: 480px) {
+    .gift-container {
+        margin-top: -3rem;
+    }
+
+    .gift-frame-group {
+        width: 18rem;
+        right: -1rem;
+    }
+
+    .gift-content {
+        padding: 2rem 2rem;
+        gap: 0.4rem;
+    }
+
+    .gift-title-row {
+        gap: 0.5rem;
+    }
+
+    .gift-title {
+        font-size: 1.8rem;
+    }
+
+    .gift-icon {
+        width: 2.5rem;
+    }
+
+    .gift-disclaimer {
+        font-size: 0.55rem;
+        line-height: 1.4;
+    }
+
+    .gift-slot-wrapper {
+        margin-right: 0.2em;
+    }
+
+    .gift-rekening {
+        gap: 0.1rem;
+    }
+
+    .gift-info {
+        gap: .1rem;
+    }
+
+    .gift-bank {
+        font-size: 0.7rem;
+    }
+
+    .gift-atas-nama {
+        font-size: 0.55rem;
+    }
+
+    .gift-copy-btn {
+        font-size: 0.5rem;
+        padding: 0.15rem 0.5rem;
+    }
+
+    .gift-dove {
+        width: 14rem;
+        margin-top: -4rem;
+        margin-right: 2rem;
+    }
+}
+
+@media (min-width: 720px) {
+    .gift-container {
+        margin-top: -4rem;
+    }
+
+    .gift-frame-group {
+        width: 24rem;
+        right: -1rem;
+    }
+
+    .gift-content {
+        padding: 2rem 2rem;
+        gap: 0.5rem;
+    }
+
+    .gift-title-row {
+        gap: 0.6rem;
+    }
+
+    .gift-title {
+        font-size: 2.5rem;
+    }
+
+    .gift-icon {
+        width: 3.5rem;
+    }
+
+    .gift-disclaimer {
+        font-size: 0.8rem;
+        line-height: 1.4;
+    }
+
+    .gift-bank {
+        font-size: 1rem;
+    }
+
+    .gift-atas-nama {
+        font-size: 0.75rem;
+    }
+
+    .gift-copy-btn {
+        font-size: 0.75rem;
+        padding: 0.15rem 0.5rem;
+    }
+
+    .gift-dove {
+        width: 16rem;
+        margin-top: -5.5rem;
+        margin-right: 4rem;
+    }
+}

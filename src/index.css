@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Alice&family=Great+Vibes&family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Moontime";
+  src: url("/assets/fonts/FontsFree-Net-MoonTime-Regular-1.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* Colors */
+  --color-green-primary: #97ac55;
+  --color-green-light: #a8bc7b;
+  --color-pink-primary: #f4a7b9;
+  --color-pink-light: #fde8ee;
+  --color-cream: #faf6f0;
+  --color-text-dark: #2c3229;
+  --color-text-muted: #8a8a8a;
+
+  /* Typography */
+  --font-moontime: "Moontime", cursive;
+  --font-great-vibes: "Great Vibes", cursive;
+  --font-alice: "Alice", serif;
+  --font-inria: "Inria Serif", serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-alice);
+  color: var(--color-text-dark);
+  overflow-x: hidden;
+  background-color: var(--color-cream);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-pink-light);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-green-primary);
+  border-radius: 2px;
+}
+
+.desktop-wrapper {
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+}
+
+.bg-checkered-wrapper,
+.bg-polkadot-wrapper,
+.bg-plaid-wrapper {
+  padding: 2rem;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: centers;
+  object-fit: cover;
+  object-position: center;
+  background-size: cover;
+}
+
+.content-column {
+  width: 100%;
+  max-width: var(--mobile-max-width);
+  position: relative;
+}
+
+.photo-column {
+  display: none;
+}
+
+@media (min-width: 480px) {
+
+  .bg-checkered-wrapper,
+  .bg-polkadot-wrapper,
+  .bg-plaid-wrapper {
+    padding: 3rem;
+  }
+}
+
+@media (min-width: 720px) {
+
+  .bg-checkered-wrapper,
+  .bg-polkadot-wrapper,
+  .bg-plaid-wrapper {
+    padding: 4rem;
+  }
+}

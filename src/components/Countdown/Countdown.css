@@ -1,0 +1,156 @@
+.cd-container {
+    padding: 1rem 0.75rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.3rem;
+}
+
+.cd-title {
+    font-family: var(--font-moontime);
+    font-size: 2rem;
+    color: #000000;
+    font-weight: 550;
+    line-height: 1;
+}
+
+.cd-subtitle {
+    font-family: var(--font-alice);
+    font-size: 0.8rem;
+    color: #000000;
+    line-height: 1.6;
+}
+
+/* TIMER */
+.cd-timer {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0.2rem;
+    margin-top: 0.5rem;
+}
+
+.cd-separator {
+    font-family: var(--font-alice);
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--color-text-dark);
+    line-height: 1.2;
+    margin-top: 0.1rem;
+}
+
+/* DIGIT BLOCK */
+.cd-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.cd-digits {
+    display: flex;
+    flex-direction: row;
+    gap: 0.05rem;
+}
+
+.cd-digit-wrapper {
+    overflow: hidden;
+    height: 2.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cd-digit {
+    font-family: var(--font-alice);
+    font-size: 2.4rem;
+    font-weight: bold;
+    color: var(--color-text-dark);
+    line-height: 1;
+    display: block;
+}
+
+.cd-label {
+    font-family: var(--font-alice);
+    font-size: 0.7rem;
+    color: var(--color-text-dark);
+    letter-spacing: 0.05em;
+}
+
+@media (min-width: 480px) {
+    .cd-container {
+        padding: 1.5rem 0.75rem 0;
+        gap: 0.3rem;
+    }
+
+    .cd-title {
+        font-size: 3rem;
+    }
+
+    .cd-subtitle {
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+
+    /* TIMER */
+    .cd-timer {
+        gap: 0.3rem;
+        margin-top: 0.6rem;
+    }
+
+    .cd-separator {
+        font-size: 2rem;
+    }
+
+    .cd-digit-wrapper {
+        height: 3.2rem;
+    }
+
+    .cd-digit {
+        font-size: 3rem;
+    }
+
+    .cd-label {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 720px) {
+    .cd-container {
+        padding: 2rem 0.75rem 0;
+        gap: 0.4rem;
+    }
+
+    .cd-title {
+        font-size: 4rem;
+    }
+
+    .cd-subtitle {
+        font-size: 1.2rem;
+        line-height: 1.4;
+    }
+
+    /* TIMER */
+    .cd-timer {
+        gap: 0.3rem;
+        margin-top: 0.6rem;
+    }
+
+    .cd-separator {
+        font-size: 2.5rem;
+    }
+
+    .cd-digit-wrapper {
+        height: 4rem;
+    }
+
+    .cd-digit {
+        font-size: 3.8rem;
+    }
+
+    .cd-label {
+        font-size: 1.2rem;
+    }
+}

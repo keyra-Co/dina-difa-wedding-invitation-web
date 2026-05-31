@@ -1,0 +1,174 @@
+/* SCHEDULE CONTAINER */
+.schedule-container {
+    padding: 0 0.75rem;
+    position: relative;
+    z-index: 5;
+    width: 270px;
+}
+
+.schedule-frame-group {
+    position: relative;
+    width: 100%;
+}
+
+.schedule-frame {
+    display: block;
+    width: 100%;
+}
+
+/* CONTENT */
+.schedule-content {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+    gap: 0.3rem;
+    text-align: center;
+}
+
+.schedule-label {
+    font-family: var(--font-moontime);
+    font-size: 1.1rem;
+    color: #000000;
+    line-height: 1;
+}
+
+/* SLOT EFFECT */
+.slot-wrapper {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slot-text {
+    display: block;
+    font-family: var(--font-alice);
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--color-text-dark);
+    text-align: center;
+    line-height: 1.2;
+}
+
+/* VENUE NAME — bold */
+.slot-wrapper:nth-child(6) .slot-text {
+    font-weight: bold;
+    font-size: 0.7rem;
+}
+
+/* ALAMAT — lebih kecil dan multiline */
+.slot-wrapper:nth-child(7) {
+    height: auto;
+    color: #000000;
+}
+
+.slot-wrapper:nth-child(7) .slot-text {
+    font-size: 0.5rem;
+    line-height: 1;
+    width: 10rem;
+    height: 100%;
+    color: #000000;
+    font-weight: 400;
+}
+
+/* ICON VENUE */
+.schedule-icon-venue {
+    width: 3rem;
+    margin: 0.3rem 0;
+}
+
+/* FLOWER POJOK KANAN BAWAH */
+.schedule-flower {
+    position: absolute;
+    width: 5rem;
+    bottom: -.7rem;
+    right: -1.5rem;
+    z-index: 5;
+    animation: sway 3s ease-in-out infinite;
+    transform-origin: bottom left;
+}
+
+@media (min-width: 480px) {
+
+    .schedule-container {
+        width: 350px;
+    }
+
+    .schedule-content {
+        padding: 2rem 1rem;
+        gap: 0.5rem;
+    }
+
+    .schedule-label {
+        font-size: 1.6rem;
+    }
+
+    .slot-text {
+        font-size: 0.9rem;
+        line-height: 1;
+    }
+
+    .slot-wrapper:nth-child(6) .slot-text {
+        font-size: 0.8rem;
+    }
+
+    .slot-wrapper:nth-child(7) .slot-text {
+        font-size: 0.65rem;
+        width: 14rem;
+    }
+
+    .schedule-icon-venue {
+        width: 4.5rem;
+        margin: 0.5rem 0;
+    }
+
+    .schedule-flower {
+        width: 6rem;
+        bottom: -.9rem;
+        right: -2rem;
+    }
+}
+
+@media (min-width: 720px) {
+    .schedule-container {
+        width: 450px;
+    }
+
+    .schedule-content {
+        padding: 2rem 1rem;
+        gap: 0.6rem;
+    }
+
+    .schedule-label {
+        font-size: 2.2rem;
+    }
+
+    .slot-text {
+        font-size: 1.2rem;
+    }
+
+    /* VENUE NAME — bold */
+    .slot-wrapper:nth-child(6) .slot-text {
+        font-size: 1rem;
+    }
+
+    .slot-wrapper:nth-child(7) .slot-text {
+        font-size: 0.8rem;
+        width: 16rem;
+    }
+
+    .schedule-icon-venue {
+        width: 6rem;
+        margin: 0.7rem 0;
+    }
+
+    .schedule-flower {
+        width: 8rem;
+        bottom: -1.5rem;
+        right: -2.5rem;
+    }
+}

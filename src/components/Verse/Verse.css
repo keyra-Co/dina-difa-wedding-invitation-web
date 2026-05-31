@@ -1,0 +1,202 @@
+.verse-container {
+    padding: 0 0.75rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+}
+
+.verse-inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.verse-monogram {
+    width: 3rem;
+    display: block;
+    margin-top: -1rem;
+    left: 50%;
+    top: -10%;
+    transform: translateX(-90%);
+    position: absolute;
+    z-index: 3;
+}
+
+.verse-frame-group {
+    position: relative;
+    width: 14rem;
+    margin-left: -2.5rem;
+    z-index: 2;
+}
+
+.verse-frame {
+    width: 100%;
+    display: block;
+}
+
+.verse-flower {
+    position: absolute;
+    width: 8.2rem;
+    animation: sway 3s ease-in-out infinite;
+}
+
+.verse-flower-left {
+    left: -3.8rem;
+    bottom: -5.2rem;
+    transform-origin: bottom right;
+    animation-delay: 0s;
+}
+
+.verse-flower-right {
+    right: -3.5rem;
+    bottom: -1rem;
+    transform-origin: bottom left;
+    animation-delay: 0.5s;
+}
+
+.verse-content {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 3rem;
+    gap: 0.5rem;
+    text-align: center;
+    width: 14rem;
+    height: 11rem;
+}
+
+.verse-ayat {
+    font-family: var(--font-inria);
+    font-style: italic;
+    font-size: 0.48rem;
+    color: var(--text-green-dark);
+    line-height: 1;
+    display: block;
+    overflow: hidden;
+}
+
+.verse-ref {
+    font-family: var(--font-alice);
+    font-size: 0.5rem;
+    color: var(--text-green-dark);
+    display: block;
+}
+
+.verse-flower-right-wrapper {
+    position: absolute;
+    right: -2rem;
+    bottom: -1rem;
+    transform: scaleX(-1);
+}
+
+.verse-flower-right-wrapper .verse-flower {
+    position: relative;
+    right: unset;
+    bottom: unset;
+}
+
+.slot-write-wrapper {
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: bottom;
+    margin-right: 0.25em;
+}
+
+.slot-write-line {
+    display: inline-block;
+}
+
+@media (min-width: 480px) {
+    .verse-monogram {
+        width: 4.5rem;
+        margin-top: -2rem;
+        left: 50%;
+        top: -10%;
+        transform: translateX(-103%);
+    }
+
+    .verse-frame-group {
+        width: 18rem;
+        margin-left: -5rem;
+    }
+
+    .verse-flower {
+        width: 10rem;
+    }
+
+    .verse-flower-left {
+        left: -6rem;
+        bottom: -6.5rem;
+    }
+
+    .verse-flower-right {
+        right: -4.5rem;
+        bottom: -1rem;
+    }
+
+    .verse-content {
+        padding: 1rem 4rem;
+        gap: 0.5rem;
+        width: 18rem;
+        height: 14rem;
+    }
+
+    .verse-ayat {
+        font-size: 0.6rem;
+    }
+
+    .verse-ref {
+        font-size: 0.7rem;
+    }
+}
+
+@media (min-width: 720px) {
+    .verse-monogram {
+        width: 5.5rem;
+        margin-top: -2rem;
+        left: 50%;
+        top: -10%;
+        transform: translateX(-102%);
+    }
+
+    .verse-frame-group {
+        width: 24rem;
+        margin-left: -5rem;
+    }
+
+    .verse-flower {
+        width: 13rem;
+    }
+
+    .verse-flower-left {
+        left: -7rem;
+        bottom: -8.5rem;
+    }
+
+    .verse-flower-right {
+        right: -6rem;
+        bottom: -2rem;
+    }
+
+    .verse-content {
+        padding: 1rem 5rem;
+        gap: 0.5rem;
+        width: 24rem;
+        height: 19rem;
+    }
+
+    .verse-ayat {
+        font-size: 0.85rem;
+    }
+
+    .verse-ref {
+        font-size: 0.9rem;
+    }
+}
