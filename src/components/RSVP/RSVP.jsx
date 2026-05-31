@@ -26,8 +26,16 @@ export default function RSVP() {
   };
 
   const handleSubmit = async () => {
-    if (!nama || hadir === null) {
-      showToast("Lengkapi nama dan konfirmasi kehadiran dulu ya!", "error");
+    if (!nama) {
+      showToast("Isi nama dulu ya!", "error");
+      return;
+    }
+    if (hadir === null) {
+      showToast("Konfirmasi kehadiran dulu ya!", "error");
+      return;
+    }
+    if (hadir === true && (!jumlah || jumlah < 1)) {
+      showToast("Isi jumlah tamu yang hadir ya!", "error");
       return;
     }
     setLoading(true);
@@ -46,7 +54,6 @@ export default function RSVP() {
 
   return (
     <div className="rsvp-container">
-      {/* TOAST */}
       {toast && (
         <Toast
           message={toast.message}
@@ -55,14 +62,12 @@ export default function RSVP() {
         />
       )}
 
-      {/* BUTTERFLY */}
       <img
         src="/assets/images/rsvp/butterfly-green.png"
         alt=""
         className="rsvp-butterfly"
       />
 
-      {/* FRAME */}
       <div className="rsvp-frame-group">
         <img
           src="/assets/images/rsvp/frame-cream-rectangle-lace.png"
@@ -94,7 +99,10 @@ export default function RSVP() {
             <div className="rsvp-options">
               <button
                 className={`rsvp-option ${hadir === true ? "rsvp-option-active" : ""}`}
-                onClick={() => setHadir(true)}
+                onClick={() => {
+                  setHadir(true);
+                  setJumlah(1);
+                }}
               >
                 Bisa dong!
               </button>
