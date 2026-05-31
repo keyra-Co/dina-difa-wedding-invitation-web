@@ -1,5 +1,6 @@
 import "./Countdown.css";
 import { useCountdown } from "../../hooks/useCountdown";
+import { AnimatePresence, motion } from "framer-motion";
 
 function DigitBlock({ value, label }) {
   const digits = String(value).padStart(2, "0").split("");
@@ -9,7 +10,18 @@ function DigitBlock({ value, label }) {
       <div className="cd-digits">
         {digits.map((digit, i) => (
           <div className="cd-digit-wrapper" key={i}>
-            <span className="cd-digit">{digit}</span>
+            <AnimatePresence mode="wait">
+              <motion.span
+                key={`${i}-${digit}`}
+                className="cd-digit"
+                initial={{ y: "-100%", opacity: 0 }}
+                animate={{ y: "0%", opacity: 1 }}
+                exit={{ y: "100%", opacity: 0 }}
+                transition={{ duration: 0.3, ease: "easeOut" }}
+              >
+                {digit}
+              </motion.span>
+            </AnimatePresence>
           </div>
         ))}
       </div>

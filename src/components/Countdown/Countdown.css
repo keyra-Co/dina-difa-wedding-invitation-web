@@ -61,6 +61,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
 .cd-digit {
@@ -69,7 +70,10 @@
     font-weight: bold;
     color: var(--color-text-dark);
     line-height: 1;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.3rem;
 }
 
 .cd-label {
@@ -110,6 +114,7 @@
 
     .cd-digit {
         font-size: 3rem;
+        width: 1.6rem;
     }
 
     .cd-label {
@@ -148,6 +153,7 @@
 
     .cd-digit {
         font-size: 3.8rem;
+        width: 2.2rem;
     }
 
     .cd-label {
