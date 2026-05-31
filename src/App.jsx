@@ -3,7 +3,7 @@ import { useMusicPlayer } from "./hooks/useMusicPlayer";
 
 import Cover from "./components/Cover/Cover";
 import Hero from "./components/Hero/Hero";
-import LocationVinyl from "./components/LocationVinyl/LocationVinyl";
+import MonogramVinyl from "./components/MonogramVinyl/MonogramVinyl";
 import Schedule from "./components/Schedule/Schedule";
 import Countdown from "./components/Countdown/Countdown";
 import AboutUs from "./components/AboutUs/AboutUs";
@@ -38,7 +38,7 @@ export default function App() {
             }}
           >
             <Hero />
-            <LocationVinyl isPlaying={isPlaying} onToggle={handleToggle} />
+            <MonogramVinyl isPlaying={isPlaying} onToggle={handleToggle} />
             <Schedule />
             <Countdown />
           </div>

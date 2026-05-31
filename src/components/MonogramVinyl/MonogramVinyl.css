@@ -1,11 +1,9 @@
-/* LOCATION VINYL CONTAINER */
-.lv-container {
+.mv-container {
     padding: 0 0.75rem;
     position: relative;
 }
 
-/* LOKASI */
-.lv-lokasi-link {
+.mv-monogram-group {
     position: absolute;
     display: flex;
     align-items: center;
@@ -17,39 +15,19 @@
     z-index: 6;
 }
 
-.lv-lokasi-frame {
+.mv-monogram-frame {
     width: 6rem;
 }
 
-.lv-lokasi-text {
+.mv-monogram-dd {
     position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    gap: 0.1rem;
-    color: #000000;
-}
-
-.lv-lokasi-title {
-    font-family: var(--font-moontime);
-    font-size: 1.2rem;
-    line-height: 1;
-}
-
-.lv-lokasi-subtitle {
-    font-family: var(--font-alice);
-    font-size: .5rem;
-    text-decoration: underline;
-    text-underline-offset: 2px;
-    line-height: 1.3;
-    text-align: center;
-    width: 3rem;
+    width: 2.5rem;
+    left: 50%;
+    transform: translateX(-40%);
 }
 
 /* VINYL GROUP */
-.lv-vinyl-group {
+.mv-vinyl-group {
     position: absolute;
     width: 8rem;
     height: 8rem;
@@ -59,13 +37,13 @@
 }
 
 /* FLOWERS */
-.lv-flower {
+.mv-flower {
     position: absolute;
     z-index: 1;
     animation: sway 3s ease-in-out infinite;
 }
 
-.lv-flower-top {
+.mv-flower-top {
     width: 4rem;
     top: -.6rem;
     right: 1.5rem;
@@ -73,7 +51,7 @@
     transform-origin: bottom left;
 }
 
-.lv-flower-bottom {
+.mv-flower-bottom {
     width: 7rem;
     bottom: .9rem;
     right: .2rem;
@@ -82,7 +60,7 @@
 }
 
 /* VINYL */
-.lv-vinyl-wrapper {
+.mv-vinyl-wrapper {
     position: relative;
     width: 5rem;
     height: 5rem;
@@ -90,14 +68,14 @@
     z-index: 2;
 }
 
-.lv-vinyl {
+.mv-vinyl {
     width: 100%;
     height: 100%;
     object-fit: contain;
     transition: transform 0.3s ease;
 }
 
-.lv-vinyl-spinning {
+.mv-vinyl-spinning {
     animation: spin 3s linear infinite;
 }
 
@@ -111,8 +89,7 @@
     }
 }
 
-/* CURVED TEXT SVG */
-.lv-vinyl-text-svg {
+.mv-vinyl-text-svg {
     position: absolute;
     inset: 0;
     width: 5rem;
@@ -121,7 +98,7 @@
     top: .2rem
 }
 
-.lv-curved-text {
+.mv-curved-text {
     font-family: var(--font-alice);
     font-size: .7rem;
     fill: white;
@@ -130,119 +107,103 @@
 }
 
 @media (min-width: 480px) {
-
-    /* LOKASI */
-    .lv-lokasi-link {
+    .mv-monogram-group {
         left: -12rem;
         top: -5rem;
     }
 
-    .lv-lokasi-frame {
+    .mv-monogram-frame {
         width: 8rem;
     }
 
-    .lv-lokasi-title {
-        font-size: 1.6rem;
-    }
 
-    .lv-lokasi-subtitle {
-        font-size: .7rem;
-        line-height: 1.3;
-        width: 4rem;
+    .mv-monogram-dd {
+        width: 3rem;
+        margin-top: .5rem;
     }
 
     /* VINYL GROUP */
-    .lv-vinyl-group {
+    .mv-vinyl-group {
         width: 10rem;
         height: 10rem;
         top: -6rem;
         right: -12rem;
     }
 
-    .lv-flower-top {
+    .mv-flower-top {
         width: 5rem;
         top: -.6rem;
         right: 1.2rem;
     }
 
-    .lv-flower-bottom {
+    .mv-flower-bottom {
         width: 9rem;
         bottom: .7rem;
         right: -.1rem;
     }
 
-    /* VINYL */
-    .lv-vinyl-wrapper {
+    .mv-vinyl-wrapper {
         width: 7rem;
         height: 7rem;
     }
 
-    /* CURVED TEXT SVG */
-    .lv-vinyl-text-svg {
+    .mv-vinyl-text-svg {
         width: 7rem;
         height: 7rem;
         top: .2rem
     }
 
-    .lv-curved-text {
+    .mv-curved-text {
         font-size: .7rem;
     }
 }
 
 @media (min-width: 720px) {
-    .lv-lokasi-link {
+    .mv-monogram-group {
         left: -15rem;
-        top: -6.5rem;
+        top: -6rem;
     }
 
-    .lv-lokasi-frame {
+    .mv-monogram-frame {
         width: 10rem;
     }
 
-    .lv-lokasi-title {
-        font-size: 2rem;
-    }
-
-    .lv-lokasi-subtitle {
-        font-size: .8rem;
-        line-height: 1.3;
+    .mv-monogram-dd {
         width: 4rem;
+        margin-top: .5rem;
     }
 
-    /* VINYL GROUP */
-    .lv-vinyl-group {
+    .mv-vinyl-group {
         width: 12rem;
         height: 12rem;
         top: -6.5rem;
         right: -15rem;
     }
 
-    .lv-flower-top {
+    .mv-flower-top {
         width: 6.5rem;
         top: -.9rem;
         right: 1.2rem;
     }
 
-    .lv-flower-bottom {
+    .mv-flower-bottom {
         width: 11rem;
         bottom: .8rem;
         right: -.4rem;
     }
 
-    /* VINYL */
-    .lv-vinyl-wrapper {
+    .mv-vinyl-wrapper {
         width: 8.5rem;
         height: 8.5rem;
     }
 
-    /* CURVED TEXT SVG */
-    .lv-vinyl-text-svg {
+    .mv-vinyl-text-svg {
         width: 8.5rem;
         height: 8.5rem;
         top: .2rem
     }
 
-    .lv-curved-text {
+    .mv-curved-text {
         font-size: .7rem;
     }
 }
