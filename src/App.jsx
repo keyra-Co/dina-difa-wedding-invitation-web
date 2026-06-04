@@ -7,6 +7,7 @@ import MonogramVinyl from "./components/MonogramVinyl/MonogramVinyl";
 import Schedule from "./components/Schedule/Schedule";
 import Countdown from "./components/Countdown/Countdown";
 import AboutUs from "./components/AboutUs/AboutUs";
+import Gallery from "./components/Gallery/Gallery";
 import RSVP from "./components/RSVP/RSVP";
 import Verse from "./components/Verse/Verse";
 import Gift from "./components/Gift/Gift";
@@ -51,6 +52,7 @@ export default function App() {
             }}
           >
             <AboutUs />
+            <Gallery />
             <RSVP />
           </div>
 
