@@ -175,7 +175,7 @@
 /* FRAME GREEN RECTANGLE */
 .frame-rect-group {
     position: relative;
-    width: 8rem;
+    width: 8.5rem;
     margin-top: -2rem;
     margin-left: 2rem;
     z-index: 3;
@@ -209,13 +209,20 @@
 .text-name {
     font-family: var(--font-great-vibes);
     font-size: 1rem;
-    line-height: 1.4;
+    line-height: 1;
+}
+
+.text-desc {
+    font-family: var(--font-alice);
+    font-size: 0.4rem;
+    line-height: 1;
+    text-transform: capitalize;
 }
 
 .text-ampersand {
     font-family: var(--font-great-vibes);
     font-size: 1.2rem;
-    margin: -.8rem 0 -.8rem;
+    margin: -.3rem 0 -.8rem;
 }
 
 .text-day {
@@ -343,7 +350,10 @@
     .text-name {
         font-family: var(--font-great-vibes);
         font-size: 1.5rem;
-        line-height: 1.4;
+    }
+
+    .text-desc {
+        font-size: 0.55rem;
     }
 
     .text-ampersand {
@@ -480,13 +490,17 @@
     .text-name {
         font-family: var(--font-great-vibes);
         font-size: 1.8rem;
-        line-height: 1.4;
+        line-height: 1.2;
+    }
+
+    .text-desc {
+        font-size: 0.65rem;
     }
 
     .text-ampersand {
         font-family: var(--font-great-vibes);
         font-size: 1.9rem;
-        margin: -.8rem 0 -8rem;
+        margin: -.8rem 0 -5rem;
     }
 
     .text-day {

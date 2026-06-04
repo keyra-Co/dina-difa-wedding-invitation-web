@@ -155,12 +155,18 @@ export default function Hero() {
               </SlideUp>
               <SlideX direction="left" delay={0.2}>
                 <p className="text-name">Dina Ameliani</p>
+                <p className="text-desc">
+                  putri kedua bapak bachrudin dan ibu rita kusumawati
+                </p>
               </SlideX>
               <SlideX direction="right" delay={0.4}>
                 <p className="text-ampersand">&</p>
               </SlideX>
               <SlideX direction="left" delay={0.6}>
                 <p className="text-name">Achmad Difa Afandi</p>
+                <p className="text-desc">
+                  putra kedua bapak majid dan ibu nanih minarnih
+                </p>
               </SlideX>
               <SlideUp delay={0.8}>
                 <p className="text-day">Minggu</p>
